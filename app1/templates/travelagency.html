@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        /* Add your custom CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin-right: 20px;
+        }
+        main {
+            flex: 1;
+            display: flex;
+            padding: 20px;
+        }
+        .left-sidebar {
+            background-color: #f1f1f1;
+            min-width: 200px;
+            padding: 10px;
+            border: 1px solid red;
+        }
+        .main-content {
+            flex: 1;
+            padding: 0 20px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* Button styles */
+        .left-sidebar ul {
+            padding: 0;
+        }
+        .left-sidebar li {
+            list-style: none;
+            margin: 10px 0;
+        }
+        .left-sidebar li a {
+            display: block;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .left-sidebar li a:hover {
+            background-color: #555;
+        }
+        
+
+        /* Media Queries */
+        @media screen and (max-width: 768px) {
+            /* For tablets and smaller screens */
+            main {
+                flex-direction: column;
+            }
+            .left-sidebar {
+                min-width: 100%;
+            }
+            .main-content {
+                padding: 20px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            /* For mobile phones */
+            nav {
+                flex-direction: column;
+            }
+            nav ul li {
+                margin: 5px 0;
+            }
+            .left-sidebar {
+                min-width: 100%;
+                padding: 10px;
+            }
+            .main-content {
+                padding: 10px;
+            }
+            .left-sidebar, .main-content {
+                border: none; /* Remove the border for mobile */
+            }
+        }
+
+
+        .companies-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; /* Center the company boxes horizontally */
+    }
+    .company-box {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 10px;
+      max-width: 300px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: background-color 0.3s ease-in-out;
+            cursor: pointer;
+    }
+    .company-logo {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 10px;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      box-shadow: 0 0 0 2px #ccc;
+    }
+    .company-details {
+      text-align: center; /* Center the company details text */
+    }
+    .company-name {
+      font-weight: bold;
+      font-size: 20px;
+      color: #333;
+      margin-bottom: 5px;
+    }
+    .company-address,
+    .company-phone {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 5px;
+    }
+    .social-icons {
+      font-size: 24px;
+      display: flex;
+      margin-top: 10px;
+    }
+    .social-icons a {
+      margin-right: 10px;
+      color: #555;
+      transition: color 0.3s ease-in-out;
+    }
+    .social-icons a:hover {
+      color: #007bff;
+    }
+    .company-link {
+            text-decoration: none;
+            color: inherit;
+        }
+        .company-box:hover {
+            background-color: #8df8e6;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="navbar">
+                <ul>
+                    <!-- Add your navbar items here -->
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="left-sidebar">
+            <ul>
+                <!-- Add your 20 categories here -->
+                <li><a href="#">Travel Agency</a></li>
+                <li><a href="#">Construction Company</a></li>
+                <li><a href="#">Painting Company</a></li>
+                <li><a href="#">Web Development Company</a></li>
+                <!-- Add more categories here -->
+            </ul>
+        </div>
+        <div class="main-content">
+            <h1 style="text-align: center;">List of Companies</h1>
+
+            <div class="companies-container">
+                <a href="companyprofile.html" class="company-link">
+                    <div class="company-box">
+                        <img class="company-logo" src="/img/logo1.webp" alt="Company 1 Logo">
+                        <div class="company-details">
+                            <div class="company-name">Company 1</div>
+                            <div class="company-address">123 Main Street, City</div>
+                            <div class="company-phone">Phone: (123) 456-7890</div>
+                            <div class="social-icons">
+                                <a href="#" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="companyprofile.html" class="company-link">
+                    <div class="company-box">
+                        <img class="company-logo" src="/img/logo2.webp" alt="Company 2 Logo">
+                        <div class="company-details">
+                            <div class="company-name">Company 2</div>
+                            <div class="company-address">456 Park Avenue, Town</div>
+                            <div class="company-phone">Phone: (987) 654-3210</div>
+                            <div class="social-icons">
+                                <a href="#" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="companyprofile.html" class="company-link">
+                    <div class="company-box">
+                        <img class="company-logo" src="/img/logo3.jpg" alt="Company 3 Logo">
+                        <div class="company-details">
+                            <div class="company-name">Company 3</div>
+                            <div class="company-address">789 Center Road, Village</div>
+                            <div class="company-phone">Phone: (555) 123-4567</div>
+                            <div class="social-icons">
+                                <a href="#" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+        </div>
+    </main>
+    <footer>
+        <!-- Add your footer content here -->
+        &copy; 2023 Your Company. All rights reserved.
+    </footer>
+</body>
+</html>
